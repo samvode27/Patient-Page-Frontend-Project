@@ -1,0 +1,177 @@
+.div
+{
+  background-image: url('/assets/images/bg-pattern.jpg');
+  background-size: cover;
+  background-color: #fcf3f3;
+  padding: 1px;
+}
+.login-container {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 410px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  border-radius: 5px;
+  backdrop-filter: blur(12px); 
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-top: 3px solid rgb(52, 230, 52);
+}
+.header .img2{
+  width: 75px; 
+  height: 20px;
+}
+.header .text{
+  font-size: 13.5px;
+  color: #5c5959;
+  margin-top: 8px;
+}
+.form-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px 18px;
+  font-size: 15px;
+  margin-top: 17px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #FF6F61;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(246, 51, 51);
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transform: translateZ(0); /* Enhance 3D effect */
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color: rgb(250, 24, 24);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.text-center a {
+  color: #FF6F61;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.text-center a:hover {
+  color: #FF9A8B;
+  text-decoration: underline;
+}
+
+.isOtpSent {
+  margin-top: 20px;
+  border-top: 2px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.isOtpSent input {
+  width: 70%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  transition: all 0.3s ease;
+}
+.isOtpSent input:focus {
+  border-color: #FF6F61;
+  box-shadow: 0 0 12px rgba(255, 111, 97, 0.3);
+}
+
+.isOtpSent button {
+  padding: 12px 30px;
+  background-color: #FF5722;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.isOtpSent button:hover {
+  background-color: #FF7043;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px 20px;
+    max-width: 85%;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .text-center {
+    font-size: 12px;
+  }
+}
+
+@keyframes input-focus {
+  0% {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.3);
+  }
+}
+
+input:focus, select:focus {
+  animation: input-focus 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #FF6F61;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.4);
+}
+

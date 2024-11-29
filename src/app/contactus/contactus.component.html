@@ -1,0 +1,17 @@
+<div class="contact-container" id="contactus">
+     <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-left">
+         <div class="contact-title">
+             <h2>Contact Us</h2>
+             <hr>
+         </div>
+ 
+         <input type="text" name="name" [(ngModel)]="contactData.name" placeholder="Your Name" class="contact-inputs" required>
+ 
+         <input type="email" name="email" [(ngModel)]="contactData.email" placeholder="Your Email" class="contact-inputs" required>
+ 
+         <textarea name="message" [(ngModel)]="contactData.message" placeholder="Your Message" class="contact-inputs" required></textarea>
+ 
+         <button type="submit" [disabled]="!contactForm.form.valid"> Submit </button>
+     </form>
+ </div>
+ 

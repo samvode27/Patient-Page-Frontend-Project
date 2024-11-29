@@ -1,0 +1,46 @@
+<div class="div">
+ <div class="login-container text-end">
+  <div class="header text-center">
+    <img src="/assets/images/favicon.png">
+    <img src="/assets/images/logo-dark.png" class="img2" >
+    <p class="text">Please enter your user information.</p>
+  </div>
+
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="email" id="email" [(ngModel)]="email" name="email" required placeholder="Enter your email">
+    </div>
+    
+    <div class="form-group">
+      <input type="password" id="password" [(ngModel)]="password" name="password" required placeholder="Enter your password">
+    </div>
+
+    <div class="form-group text-start">
+      <label>Select Role</label>
+      <select [(ngModel)]="role" name="role">
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+      </select>
+    </div>
+
+  
+      <button type="button" (click)="sendOtp()">Send OTP</button>
+    
+      <div *ngIf="isOtpSent">
+        <label for="otp">OTP:</label>
+        <input id="otp" [(ngModel)]="otp" name="otp" type="text" required placeholder="Enter OTP">
+        <button type="button" (click)="verifyOtp()">Verify OTP</button>
+      </div>
+
+      <button type="submit" [disabled]="!otpVerified">Login</button>
+  
+
+  </form>
+
+  <p class="text-center">
+    Don't have an account? <a routerLink="/signup">Sign Up</a>
+  </p>
+</div>
+
+</div>

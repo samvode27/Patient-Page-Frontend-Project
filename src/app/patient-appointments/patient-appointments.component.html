@@ -1,0 +1,64 @@
+
+<div class="container-fluid patient-appointments" id="appointment">
+  <div class="container p-3 pt-5 text-start">
+    <h2>Your Appointments</h2>
+    <button class="m-2" (click)="bookAppointment()">Book an Appointment</button>
+  </div>
+
+  <!-- Upcoming Appointments Section -->
+  <div class="container col">
+    <div class="col-md-12 col-lg-8 mx-auto">
+      <h3 class="pt-5 pb-4">Upcoming Appointments</h3>
+      <table class="table table-responsive table-hover table-sm table-primary">
+        <thead>
+          <tr>
+            <th>Doctor</th>
+            <th>Specialty</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let appointment of upcomingAppointments">
+            <td>{{ appointment.doctor }}</td>
+            <td>{{ appointment.specialty }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal for booking appointment -->
+  <div class="modal" tabindex="-1" role="dialog" [ngClass]="{ 'show': isModalOpen }">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title">Book an Appointment</h5>
+          <button type="button" class="close" (click)="closeModal()">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <form (ngSubmit)="submitAppointment()">
+            <div class="form-group">
+              <label for="doctor">Doctor</label>
+              <input type="text" class="form-control" id="doctor" placeholder="Enter doctor's name" [(ngModel)]="appointment.doctor" name="doctor" required>
+            </div>
+            <div class="form-group">
+              <label for="specialty">Specialty</label>
+              <input type="text" class="form-control" id="specialty" placeholder="Enter specialty" [(ngModel)]="appointment.specialty" name="specialty" required>
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date" [(ngModel)]="appointment.date" name="date" required>
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

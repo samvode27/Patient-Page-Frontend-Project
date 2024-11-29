@@ -1,0 +1,214 @@
+/* .notification-page {
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+
+.notification.reminder {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.notification.reminder h4 {
+  color: #f44336;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.notification.comment {
+  background-color: #e3f2fd;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.notification.comment h4 {
+  color: #2196f3;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 0.8em;
+  color: #888;
+}
+
+
+.notification.like {
+  background-color: #f1f8e9;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.notification.like h4 {
+  color: #8bc34a;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 0.8em;
+  color: #888;
+} */
+
+
+
+
+
+
+
+
+
+
+/* Base Styles */
+.notification-page {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* General Notification Styling */
+.notification {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.notification h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Reminder Notification */
+.notification.reminder {
+  background-color: #fff3e0;
+  border-left: 5px solid #ff9800;
+}
+
+.notification.reminder h4 {
+  color: #ff5722;
+}
+
+.notification.reminder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Comment Notification */
+.notification.comment {
+  background-color: #e3f2fd;
+  border-left: 5px solid #2196f3;
+}
+
+.notification.comment h4 {
+  color: #1e88e5;
+}
+
+.notification.comment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Like Notification */
+.notification.like {
+  background-color: #f1f8e9;
+  border-left: 5px solid #8bc34a;
+}
+
+.notification.like h4 {
+  color: #388e3c;
+}
+
+.notification.like:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* List Styling */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Date Styling */
+.date {
+  font-size: 0.8em;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notification-page {
+    padding: 10px;
+  }
+
+  .notification {
+    margin-bottom: 15px;
+  }
+
+  .col-md-4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .notification-page {
+    padding: 5px;
+  }
+
+  h1, h2 {
+    font-size: 1.2em;
+  }
+}

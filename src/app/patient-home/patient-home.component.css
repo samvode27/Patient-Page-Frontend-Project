@@ -1,0 +1,183 @@
+.patient-home {
+  padding: 50px;
+  background-image: url('/assets/images/image4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* For a parallax effect */
+}
+.patient-home h2 {
+  font-size: 30px;
+}
+.search-section input, .search-section select {
+  padding: 10px;
+  margin-right: 10px;
+  width: 25%;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+.search-section button {
+  width: 100px;
+  height: 48px;
+  border-radius: 15px;
+  margin-left: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.search-section button:hover {
+  background-color: #0056b3;
+}
+
+.top-doctors-container {
+  margin-top: 100px;
+}
+
+.top-doctors {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.doctor-card {
+  background-color: rgb(54, 41, 63);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 300px;
+  height: 250px;
+  margin: 10px;
+  box-shadow: 0 14px 18px rgba(10,10, 10, 0.5);
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.doctor-card h4 {
+  margin-top: 10px;
+  font-size: 1.7rem;
+  color: #cccc0b;
+}
+
+.doctor-card p {
+  font-size: 1.1rem;
+  color: #cccc0b;
+}
+
+.doctor-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.doctor-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Blog section */
+.blog-section {
+  margin-top: 30px;
+}
+
+.blog-section a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  .patient-home {
+    padding: 20px;
+  }
+
+  .search-section input, .search-section select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-section button {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .top-doctors {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-card {
+    width: 90%;
+    margin: 10px auto;
+    height: auto;
+  }
+
+  .patient-home h2 {
+    font-size: 24px;
+  }
+
+  .doctor-card h4 {
+    font-size: 1.5rem;
+  }
+
+  .doctor-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+  .search-section input, .search-section select {
+    width: 45%;
+  }
+
+  .top-doctors {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .doctor-card {
+    width: 40%;
+  }
+
+  .patient-home h2 {
+    font-size: 26px;
+  }
+  .search-section button{
+    margin-top: 15px;
+  }
+}
+
+/* Desktop devices */
+@media (min-width: 1025px) {
+  .search-section input, .search-section select {
+    width: 25%;
+  }
+
+  .top-doctors {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .doctor-card {
+    width: 30%;
+  }
+
+  .patient-home h2 {
+    font-size: 28px;
+  }
+}
+

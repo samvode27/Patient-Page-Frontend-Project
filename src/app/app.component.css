@@ -1,0 +1,25 @@
+/* app.component.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffdd57;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}

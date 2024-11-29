@@ -1,0 +1,40 @@
+<header class="header">
+  <nav class="navbar">
+    
+    <div class="logo">
+      <div class="ring"></div> 
+      <div class="ring"></div>                                                                                             
+      <div class="ring"></div>
+      <div class="ring"></div>
+   
+      <a routerLink="/">E<span>Health</span></a>
+    </div>
+
+    <!-- Hamburger menu for small screens -->
+    <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+
+    <!-- Navigation links (hidden on small screens, shown when menu is open) -->
+    <ul class="nav-links" [class.show]="isMenuOpen">
+      <li><a (click)="scrollTo('home')">Home</a></li>
+      <li><a (click)="scrollTo('appointment')">Appointment</a></li>
+      <li><a (click)="scrollTo('blog')">Blog</a></li>
+      <li><a (click)="scrollTo('notifications')">Notifications</a></li>
+      <li><a (click)="scrollTo('chat')">Chat</a></li>
+      <li><a (click)="scrollTo('contactus')">Contact Us</a></li>
+      <li>
+        <div class="container dropdown">
+          <div class="profile-image-container">
+            <img src="assets/images/doctor2.avif" class="avatar">
+          </div>
+          <div class="dropdown-content" *ngIf="isDropdownOpen">
+            <a (click)="updateProfile()">Profile</a>
+            <a (click)="logout()">Logout</a>
+          </div>
+        </div> 
+      </li>
+
+      <!-- Close button for the menu (on small screens) -->
+      <li class="close-menu" (click)="closeMenu()">X</li> 
+    </ul>
+  </nav>
+</header>

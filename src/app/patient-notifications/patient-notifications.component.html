@@ -1,0 +1,102 @@
+<!-- <div class="container notification-page pt-5 pb-5" id="notifications">
+  <h2 class="pt-5">Notifications</h2>
+  
+  <div class="row pt-4">
+    <div class="col-md-4">
+      <div class="notification reminder">
+        <h4>Reminder Notifications</h4>
+        <ul>
+          <li *ngFor="let reminder of reminders">
+            <span>{{ reminder.message }}</span> <br />
+            <span class="date">{{ reminder.date }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="notification comment">
+        <h4>Comment Notifications</h4>
+        <ul>
+          <li *ngFor="let comment of comments">
+            <span>{{ comment.username }} commented: "{{ comment.text }}"</span>
+            <br />
+            <span class="date">{{ comment.date }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="notification like">
+        <h4>Like Notifications</h4>
+        <ul>
+          <li *ngFor="let like of likes">
+            <span>{{ like.username }} liked your post</span>
+            <br />
+            <span class="date">{{ like.date }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container notification-page pt-5 pb-5" id="notifications">
+  <h2>Notifications</h2>
+  
+  <div class="row pt-4">
+    <!-- Reminder Notifications -->
+    <div class="col-md-4">
+      <div class="notification reminder">
+        <h4><i class="fas fa-bell"></i> Reminder Notifications</h4>
+        <ul>
+          <li *ngFor="let reminder of reminders">
+            <span>{{ reminder.message }}</span> <br />
+            <span class="date">{{ reminder.date | date: 'short' }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Comment Notifications -->
+    <div class="col-md-4">
+      <div class="notification comment">
+        <h4><i class="fas fa-comment-alt"></i> Comment Notifications</h4>
+        <ul>
+          <li *ngFor="let comment of comments">
+            <span><strong>{{ comment.username }}</strong> commented: "{{ comment.text }}"</span>
+            <br />
+            <span class="date">{{ comment.date | date: 'short' }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Like Notifications -->
+    <div class="col-md-4">
+      <div class="notification like">
+        <h4><i class="fas fa-thumbs-up"></i> Like Notifications</h4>
+        <ul>
+          <li *ngFor="let like of likes">
+            <span><strong>{{ like.username }}</strong> liked your post</span>
+            <br />
+            <span class="date">{{ like.date | date: 'short' }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

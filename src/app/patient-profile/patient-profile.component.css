@@ -1,0 +1,421 @@
+/* Global Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+}
+
+/* Container for the entire page */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cont {
+  height: 60vh;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 10vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* User display section */
+.user-display {
+  padding-left: 2%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  height: 51vh;
+  padding-top: 15%;
+  background-image: url('/assets/images/doctor2.avif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.user-display-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.user-display-info {
+  margin-left: 20px;  
+  margin-top: 40px;
+}
+
+.user-display-info .name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #091613;
+}
+
+.user-display-info .nick {
+  font-size: 15px;
+  color: #0bca45;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+/*********************************/
+/* Profile Section */
+
+/* .profile-container{
+  max-width: 500px;
+}
+.profile {
+  padding-top: 40px;
+}
+
+.patient-profile {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e64a19;
+} */
+
+/*********************************/
+/* Form Section */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f4f7fc;
+  transition: border 0.3s ease;
+}
+
+.form-control:focus {
+  border: 1px solid #ff5722;
+  outline: none;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .cont {
+    height: 55vh;
+  }
+  .user-display-info .name {
+    font-size: 20px;
+  }
+  .user-display-info .nick {
+    font-size: 14.5px;
+  }
+  .user-display-bottom{
+    margin-top: 120px;
+  }
+  .cont{
+    height: 60vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-display {
+    height: 45vh;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .user-display-info .name {
+    font-size: 18px;
+  }
+
+  .user-display-info .nick {
+    font-size: 13px;
+  }
+
+  .profile-container {
+    padding: 15px;
+  }
+  .user-display-bottom{
+    margin-top: 105px;
+  }
+  .cont{
+    height: 55vh;
+  }
+}
+@media (max-width: 1000px) {
+  .user-display-bottom{
+    margin-top: 140px;
+  }
+  .cont{
+    height: 55vh;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .user-display {
+    height: 40vh;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .user-display-info .name {
+    font-size: 16px;
+  }
+
+  .profile-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile-info p {
+    font-size: 14px;
+  }
+  .user-display-bottom{
+    margin-top: 113px;
+  }
+  .cont{
+    height: 50vh;
+  }
+}
+@media (max-width: 765px) {
+  .user-display-bottom{
+    margin-top: 140px;
+  }
+  .cont{
+    height: 50vh;
+  }
+}
+@media (max-width: 540px) {
+  .user-display-bottom{
+    margin-top: 145px;
+  }
+  .cont{
+    height: 50vh;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user-display-info .name {
+    font-size: 14px;
+  }
+
+  .profile-container,
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-control {
+    font-size: 12px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+  .user-display-bottom{
+    margin-top: 158px;
+  }
+  .cont{
+    height: 50vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .user-display-bottom{
+    margin-top: 150px;
+  }
+  .cont{
+    height: 50vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .user-display-bottom{
+    margin-top: 160px;
+  }
+  .cont{
+    height: 50vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .user-display-bottom{
+    margin-top: 160px;
+  }
+  .cont{
+    height: 50vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 435px) {
+  .user-display-bottom{
+    margin-top: 167px;
+  }
+  .cont{
+    height: 50vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+    margin-top: -1px;
+  }
+}
+@media (max-width: 375px) {
+  .user-display-bottom{
+    margin-top: 170px;
+  }
+  .cont{
+    height: 50vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+  }
+}
+@media (max-width: 335px) {
+  .user-display-bottom{
+    margin-top: 175px;
+  }
+  .cont{
+    height: 50vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  .user-display-bottom{
+    margin-top: 165px;
+    flex-direction: column;
+  }
+  .user-display-info{
+    margin-top: -1px;
+    margin-left: -1px;
+  }
+  .cont{
+    height: 53vh;
+  }
+  .user-display-info .name {
+    font-size: 17px;
+  }
+  .user-display-info .nick {
+    font-size: 14px;
+  }
+}

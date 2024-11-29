@@ -1,0 +1,51 @@
+<!-- 
+<header class="container-fluid header">
+  <nav class="navbar">
+    <div class="logo">
+      <a routerLink="/">eHealth</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/blog">Blog</a></li>
+      <li><a routerLink="/login">Login/SignUp</a></li>
+      <li><a routerLink="/faq">FAQ</a></li>
+      <li><a routerLink="/contact-us">Contact Us</a></li>
+      <li><a routerLink="/about-us">About Us</a></li>
+    </ul>
+  </nav>
+</header> -->
+
+
+<header class="container-fluid header">
+  <nav class="navbar">
+    <div class="logo">
+      <a routerLink="/">eHealth</a>
+    </div>
+
+    <!-- Hamburger Menu (Only for screens <= 768px) -->
+    <div class="hamburger" (click)="toggleMenu()">
+      &#9776;
+    </div>
+
+    <!-- Navigation Links (Conditionally shown on smaller screens) -->
+    <ul class="nav-links" [ngClass]="{ 'active': menuActive }">
+      <li><a routerLink="/home" class="home">Home</a></li>
+      <li><a routerLink="/blog">Blog</a></li>
+      <li><a routerLink="/login">Login/SignUp</a></li>
+      <li><a routerLink="/faq">FAQ</a></li>
+      <li><a routerLink="/contact-us">Contact Us</a></li>
+      <li><a routerLink="/about-us">About Us</a></li>
+
+      <!-- Close Button (Only shown when the menu is active) -->
+      <li class="close-btn" (click)="toggleMenu()">&#10005;</li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+
+
+
