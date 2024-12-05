@@ -7,6 +7,8 @@ import { PatientNotificationComponent } from '../patient-notifications/patient-n
 import { FooterComponent } from '../footer/footer.component';
 import { ChatComponent } from '../chat/chat.component';
 import { ContactUsComponent } from '../contactus/contactus.component';
+import { MatDialog } from '@angular/material/dialog';
+import { ProfileModalComponent } from '../profile-modal/profile-modal.component';
 
 @Component({
   selector: 'app-patientpage',
@@ -16,5 +18,20 @@ import { ContactUsComponent } from '../contactus/contactus.component';
   styleUrl: './patientpage.component.css'
 })
 export class PatientpageComponent {
+  patient = {
+    name: 'John Doe',
+    username: 'johndoe123',
+    email: 'john.doe@example.com',
+    age: 30,
+    phone: '123-456-7890'
+  };
 
+  constructor(public dialog: MatDialog) {}
+
+  openProfileModal(patient: any) {
+    const dialogRef = this.dialog.open(ProfileModalComponent, {
+      width: '600px',
+      data: { patient: patient }
+    });
+  }
 }

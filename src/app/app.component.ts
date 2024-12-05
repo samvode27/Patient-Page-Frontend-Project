@@ -13,7 +13,7 @@ import { PatientpageComponent } from './patientpage/patientpage.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FooterComponent, HeaderComponent, PatientHomeComponent, PatientBlogComponent, PatientAppointmentsComponent,PatientProfileComponent, PatientpageComponent],
+  imports: [RouterOutlet, HeaderComponent, PatientHomeComponent, PatientBlogComponent, PatientAppointmentsComponent,PatientProfileComponent, PatientpageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,23 +1,16 @@
 .landing-page {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #f6f5f5;
-}
-
-/* Hero Section */
-.a {
-  background-image: url("/assets/images/b.jpg");
-  background-size: cover;
-  background-position: left;
-  height: 700px;
+  background-color: #e6e3e3;
 }
 
 .hero-section {
   padding-top: 20%;
-  margin-top: 5%; 
   padding: 0;
-  margin-left: 5%;
-  width: max-content;
+  padding-left: 5%;
+  background-image: url("/assets/images/b.jpg");
+  background-size: cover;
+  background-position: left;
+  height: 700px;
 }
 
 .hero-section h1 {
@@ -31,7 +24,6 @@
   color: #3b3b3b;
   margin: 0;
 }
-
 /* Search Bar */
 .search-bar {
   display: flex;
@@ -42,6 +34,12 @@
 .search-bar input {
   padding: 10px;
   width: 300px;
+  margin-right: 10px;
+  height: 50px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar button {
@@ -65,32 +63,32 @@
 }
 
 .campus-col {
-  flex-basis: 30%;
-  border-radius: 10px;
+  flex-basis: 32%;
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
-  margin-left: 10px;
+  border-radius: 10px;
 }
 
 .campus-col img {
   width: 100%;
-  height: 350px;
+  height: 400px;
   display: block;
 }
 
 .layer {
   background: transparent;
   height: 100%;
-  width: 100%;
+  width: 93%;
   position: absolute;
   top: 0;
   left: 0;
   transition: 0.5s;
+  margin-left: 11px;
 }
 
 .layer:hover {
-  background: rgba(226, 0, 0, 0.7);
+  background: rgba(255, 3, 49, 0.7);
 }
 
 .layer h3,
@@ -120,50 +118,60 @@
 }
 
 /* Top Doctors Section */
-.top-doctors-container {
-  margin-top: 40px;
+.top-doctors-container .top{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.top-doctors-container .top h1{
+  font-size: 36px;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.top-doctors-container .top p{
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+
 }
 
-.top-doctors-container h1 {
-  font-size: 1.75rem;
-  padding-top: 50px;
-  margin-left: 4%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 600;
-}
+
 
 .top-doctors {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .doctor-card {
-  background-color: #f1f1f1;
+  background: #fbeeee;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
   width: 330px;
   height: 220px;
   margin-top: 20px;
-  box-shadow: 0 14px 18px rgba(10, 10, 10, 0.5);
+  box-shadow: 0 14px 18px rgba(10, 10, 10, 0.2);
 }
 
 .doctor-card h4 {
   margin-top: 10px;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   color: #007bff;
 }
 
 .doctor-card button {
-  background-color: #007bff;
+  background-color: #4295ee;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .doctor-card button:hover {
@@ -175,13 +183,13 @@
 /* For Mobile Devices */
 @media (max-width: 767px) {
   .hero-section {
-    text-align: center;
-    padding-top: 40%;
-    margin-left: 5%;
+    padding-top: 50%;
+    flex-direction: column;
+   
   }
 
   .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-section p {
@@ -192,7 +200,7 @@
     flex-direction: column;
     padding-top: 50px;
     justify-content: center;
-    margin-left: 15%;
+    margin-left: 18%;
   }
 
   .search-bar input {
@@ -226,6 +234,13 @@
     width: 80%;
     margin-bottom: 20px;
   }
+  .campus-col img {
+    width: 100%;
+  }
+  
+  .layer {
+    width: 96%;
+  }
 
 }
 
@@ -233,7 +248,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-section {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 40%;
   }
 
   .hero-section h1 {
@@ -277,6 +292,13 @@
   .doctor-card {
     width: 55%;
     margin-left: 25%;
+  }
+  .campus-col img {
+    width: 100%;
+  }
+  
+  .layer {
+    width: 93.5%;
   }
 }
 

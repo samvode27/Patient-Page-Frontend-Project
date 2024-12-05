@@ -3,49 +3,54 @@
   <app-landingheader></app-landingheader>
   
   <!-- Main Content -->
-  <div class="container-fluid main-content">
-    <div class="row">
-      <div class="a">
-        <div class="hero-section text-start">
-          <p>Caring for better life</p>
-          <h1>Leading the way in medical <br> excellence</h1>
-          <p>Your health, our priority. Find doctors and schedule appointments online.</p>
+  <div class="main-content">
+    <div class="hero-section text-start">
+      <p>Caring for better life</p>
+      <h1>Leading the way in medical <br> excellence</h1>
+      <p>Your health, our priority. Find doctors and schedule appointments online.</p>
+    </div>
+
+    <div class="container-fluid">
+      <div class="search-bar">
+        <input type="text" placeholder="Search doctors by name, specialty, etc." [(ngModel)]="searchQuery" />
+        <button>Search</button>
+      </div>
+
+      <div class="doctors">
+        <div class="row">
+          <div *ngFor="let doctor of filteredDoctors" class="campus-col" >
+      
+            <img [src]="doctor.picture" alt="{{doctor.name}}" class="contact-avatar">
+            <div class="layer">
+              <h2>{{ doctor.name }}</h2>
+              <h3>{{ doctor.specialty }}</h3>
+            </div>
+          </div>
         </div>
-      </div> 
-    </div>
+      </div>
+     
+      <div class="top-doctors-container">
 
-    <div class="search-bar">
-      <input type="text" placeholder="Search doctors by name, specialty, etc." [(ngModel)]="searchQuery" />
-      <button>Search</button>
-    </div>
-
-    <div class="doctors">
-      <div class="row">
-        <div *ngFor="let doctor of filteredDoctors" class="campus-col" >
-    
-          <img [src]="doctor.picture" alt="{{doctor.name}}" class="contact-avatar">
-          <div class="layer">
-        
-            <h2>{{ doctor.name }}</h2>
-            <h3>{{ doctor.specialty }}</h3>
+        <div class="top">
+          <h1>Top Doctors</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, reiciendis!</p>
+        </div>
+        <div class="top-doctors mb-5">
+          <div *ngFor="let doctor of doctors" class="doctor-card">
+            <h4>{{ doctor.name }}</h4>
+            <p>{{ doctor.specialty }}</p>
+            <button>Book Appointment</button>
           </div>
         </div>
       </div>
     </div>
+
+   
+
    
 
     <!-- Top Doctors Section -->
-    <div class="top-doctors-container">
-
-      <h1 class="text-start">Top Doctors</h1>
-      <div class="top-doctors mb-5">
-        <div *ngFor="let doctor of doctors" class="doctor-card">
-          <h4>{{ doctor.name }}</h4>
-          <p>{{ doctor.specialty }}</p>
-          <button>Book Appointment</button>
-        </div>
-      </div>
-    </div>
+    
   </div>
 
   <!-- Footer -->

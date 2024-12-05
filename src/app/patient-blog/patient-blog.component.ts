@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,32 +11,23 @@ import { FormsModule } from '@angular/forms';
 })
 export class PatientBlogComponent {
 
-  blogs = [
-    {  title: 'My First Blog',  content: 'This is the content of my first blog post.',  author: 'Dr. Smith',  date: new Date().toLocaleDateString(), },
-    {  title: 'Health Tips for Winter',  content: 'Here are some health tips to keep you healthy during winter.',  author: 'Dr. Jane Doe',  date: new Date().toLocaleDateString(),  },
-  ];
-
-  newBlog = {  title: '',  content: '',  author: ''  };
   
+  blogs = [
+    { title: 'My First Blog', content: 'This is the content of my first blog post.', author: 'Dr. Smith', date: new Date().toLocaleDateString() },
+    { title: 'Health Tips for Winter', content: 'Here are some health tips to keep you healthy during winter.', author: 'Dr. Jane Doe', date: new Date().toLocaleDateString() },
+  ];
+  
+  newBlog = { title: '', content: '', author: '' };
   comment = '';
 
+  isModalOpen = false;
+
   openAddBlogModal() {
-    const modal = new window.bootstrap.Modal(document.getElementById('addBlogModal'));
-    modal.show();
+    this.isModalOpen = true;
   }
 
-  addBlog() {
-    if (this.newBlog.title && this.newBlog.content && this.newBlog.author) {
-      const newPost = {
-        ...this.newBlog,
-        date: new Date().toLocaleDateString(),
-      };
-      this.blogs.push(newPost);
-      this.newBlog = { title: '', content: '', author: '' }; 
-
-      const modal = new window.bootstrap.Modal(document.getElementById('addBlogModal'));
-      modal.hide();
-    }
+  closeAddBlogModal() {
+    this.isModalOpen = false;
   }
 
   addComment(blog: any) {
@@ -45,5 +36,4 @@ export class PatientBlogComponent {
       this.comment = ''; 
     }
   }
-  
 }

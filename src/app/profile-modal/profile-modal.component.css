@@ -1,0 +1,156 @@
+/* Body and Global Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styling */
+.container {
+  margin-top: 50px;
+}
+
+/* Modal Header */
+.modal-header {
+  background-color: #007bff;
+  color: white;
+  border-bottom: none;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Profile Image */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Profile Information */
+.user-display-info {
+  text-align: center;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nick {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Form Styling */
+.form-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+input.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  transition: border 0.3s ease;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+}
+
+.error {
+  font-size: 0.9rem;
+  color: #e74c3c;
+  margin-top: 5px;
+}
+
+/* Profile Info Section */
+.profile-info {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.profile-info strong {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Layout of Modal Content */
+.modal-body {
+  padding: 30px;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.col-md-6 {
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 100%;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
+}

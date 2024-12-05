@@ -1,302 +1,119 @@
-/* 
+
 .header {
-  background-color: rgb(198, 191, 191); 
-  color: rgb(13, 14, 13);
-  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(142, 140, 144); 
+  padding: 25px 25px;
+  color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.header.dark-theme {
+  background-color: #121212;
+  color: white;
+}
 
-.navbar {
+.logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
+  justify-content: center;
 }
 
 .logo a {
   font-size: 25px;
   font-weight: bold;
-  color: rgb(10, 7, 7);
+  color: white;
   text-decoration: none;
   font-family: 'Arial', sans-serif;
+  margin-left: 70%;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
+.logo span {
+  margin-left: 10%;
+  color: orange;
 }
 
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  color: rgb(5, 11, 142);
-  text-decoration: none;
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #4108ec;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav-links li {
-    margin-left: 0;
-    width: 100%;
-    text-align: left;
-  }
-
-  .nav-links a {
-    padding: 10px 20px;
-    width: 100%;
-    text-align: left;
-  }
-} */
-
-
-
-
-/* General header styles */
-.header {
-  background-color: rgb(198, 191, 191);
-  color: rgb(13, 14, 13);
-  padding: 25px 30px;
-  /* position: sticky; */
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.logo a {
-  font-size: 25px;
-  font-weight: bold;
-  color: rgb(10, 7, 7);
-  text-decoration: none;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Navigation Links */
-.nav-links {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  color: rgb(5, 11, 142);
-  text-decoration: none;
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #4108ec;
-}
-
-/* Hamburger Menu Icon for small screens */
-.hamburger {
+.toggle-btn {
   display: none;
-  font-size: 30px;
-  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
 }
 
-/* Close Button for Mobile/Tablet Screens (Visible when menu is active) */
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-left: 40px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.nav-list li a:hover {
+  color: orange;
+}
+
 .close-btn {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 15px;
-  margin-top: auto;
-  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
 }
 
-/* Media Query for screens <= 768px */
-@media (max-width: 768px) {
-
-  /* Stack navbar items vertically */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* Hide navigation links by default on small screens */
-  .nav-links {
+@media (max-width: 940px) {
+  .nav-menu {
     display: none;
-    flex-direction: column;
-    width: 280px;
-    text-align: left;
-    margin-left: 100%;
-    margin-top: -25px;
-    background-color: rgb(198, 191, 191);
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
     position: absolute;
-  }
-
-  /* When the menu is active, show it */
-  .nav-links.active {
-    display: flex;
-    transform: translateX(-250px); /* Slide in from the right */
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    margin-left: auto;
-  }
-
-  .nav-links a {
-    width: 100%;
-    text-align: right;
-    margin-left: auto;
-  }
-
-  /* Show hamburger menu on small screens */
-  .hamburger {
-    display: block; 
-    margin-left: auto;
-    margin-top: -40px;
-  }
-
-
-  /* Show close button when menu is active */
-  .nav-links.active .close-btn {
-    display: block;
-    margin-left: auto;
-    position: absolute;
-    text-align: right;
-  }
-  .nav-links a.home{
-    position: relative;
-    margin-top: 500px;
-  }
-
-
-  /* Mobile and Tablet Views (max-width: 1024px) */
-@media (max-width: 1024px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* Initially hide the menu off-screen for mobile and tablet */
-  .nav-links {
-    display: none;
-    flex-direction: column;
+    top: 60px;
+    right: 20px;
+    background-color: rgb(142, 140, 144); 
     width: 250px;
-    position: absolute;
-    top: 0;
-    right: -250px; /* Positioned off-screen */
-    background-color: rgb(198, 191, 191);
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    margin-right: -20px;
   }
 
-  /* When the menu is active, it will slide in */
-  .nav-links.active {
-    display: flex;
-    transform: translateX(-250px); /* Slide-in from the right */
-  }
-
-  /* Full width of the nav items in the mobile menu */
-  .nav-links li {
-    width: 100%;
-    text-align: left;
-    margin: 0;
-  }
-
-  /* Make nav links large enough for mobile/touch */
-  .nav-links a {
-    padding: 15px 20px;
-    width: 100%;
-    text-align: left;
-  }
-
-  /* Show hamburger icon on smaller devices */
-  .hamburger {
+  .nav-menu.show {
     display: block;
   }
 
-  /* Display the close button when the menu is active */
-  .nav-links.active .close-btn {
+  .nav-list {
+    flex-direction: column;
+    margin-left: 25px;
+  }
+
+  .nav-list li {
+    margin: 15px 0;
+    font-size: 1rem;
+  }
+
+  .toggle-btn {
     display: block;
   }
+  .close-btn{
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
 }
 
-/* Larger Screens (Desktop > 1024px) */
-@media (min-width: 1025px) {
-  .navbar {
-    flex-direction: row;
-  }
-
-  .nav-links {
-    display: flex;  /* Horizontally display nav items on large screens */
-    position: static;
-    width: auto;
-  }
-
-  .nav-links li {
-    margin-left: 20px;  /* Space out the nav items */
-  }
-
-  .nav-links a {
-    padding: 5px 15px;
-  }
-
-  .hamburger {
-    display: none; /* Hide hamburger icon on larger screens */
-  }
-
-  .close-btn {
-    display: none; /* Hide close button on larger screens */
-  }
-
-}
-
-
-
-
+.dark-theme .nav-menu {
+  background-color: #121212;
 }

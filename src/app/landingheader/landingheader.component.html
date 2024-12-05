@@ -1,51 +1,24 @@
-<!-- 
-<header class="container-fluid header">
-  <nav class="navbar">
-    <div class="logo">
-      <a routerLink="/">eHealth</a>
-    </div>
+<header class="header" [class.dark-theme]="isDarkTheme">
+  <!-- Logo with rings animation -->
+  <div class="logo">
+    <a routerLink="/">E<span>Health</span></a>
+  </div>
 
-    <ul class="nav-links">
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/blog">Blog</a></li>
-      <li><a routerLink="/login">Login/SignUp</a></li>
-      <li><a routerLink="/faq">FAQ</a></li>
-      <li><a routerLink="/contact-us">Contact Us</a></li>
-      <li><a routerLink="/about-us">About Us</a></li>
+  <!-- Toggle button (only visible on small screens) -->
+  <button *ngIf="isMobile" (click)="toggleMenu()" class="toggle-btn">
+    <span class="toggle-icon">☰</span>
+  </button>
+
+  <!-- Navigation menu (hidden on small screens by default) -->
+  <nav [class.show]="isMenuOpen" class="nav-menu">
+    <ul class="nav-list">
+      <li><a (click)="scrollTo('home')">Home</a></li>
+      <li><a (click)="scrollTo('appointment')">Blog</a></li>
+      <li><a routerLink="/login">Login/Signup</a></li>
+      <li><a (click)="scrollTo('chat')">FAQ</a></li>
+      <li><a (click)="scrollTo('contactus')">Contact Us</a></li>
+      <li><a (click)="scrollTo('contactus')">About Us</a></li>
     </ul>
-  </nav>
-</header> -->
-
-
-<header class="container-fluid header">
-  <nav class="navbar">
-    <div class="logo">
-      <a routerLink="/">eHealth</a>
-    </div>
-
-    <!-- Hamburger Menu (Only for screens <= 768px) -->
-    <div class="hamburger" (click)="toggleMenu()">
-      &#9776;
-    </div>
-
-    <!-- Navigation Links (Conditionally shown on smaller screens) -->
-    <ul class="nav-links" [ngClass]="{ 'active': menuActive }">
-      <li><a routerLink="/home" class="home">Home</a></li>
-      <li><a routerLink="/blog">Blog</a></li>
-      <li><a routerLink="/login">Login/SignUp</a></li>
-      <li><a routerLink="/faq">FAQ</a></li>
-      <li><a routerLink="/contact-us">Contact Us</a></li>
-      <li><a routerLink="/about-us">About Us</a></li>
-
-      <!-- Close Button (Only shown when the menu is active) -->
-      <li class="close-btn" (click)="toggleMenu()">&#10005;</li>
-    </ul>
+    <button *ngIf="isMenuOpen" (click)="closeMenu()" class="close-btn">X</button>
   </nav>
 </header>
-
-
-
-
-
-
-

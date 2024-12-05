@@ -1,33 +1,115 @@
-
+/* General Body Styling */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f9fafb;
   color: #333;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Comment Section Inside Blog */
+.comment-section {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
 }
 
-/* Header */
-h2 {
-  font-size: 2.5rem;
-  color: #007bff;
+.comment-section textarea {
+  width: 100%;
+  height: 110px;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #ddd;
+  resize: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-section textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.a {
+  margin-top: 10px;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.a:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+/* Styling for Comment List */
+.comments-list {
+  margin-top: 25px;
+}
+
+.comments-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comments-list li {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comments-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-author {
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 40px;
+  color: #007bff;
 }
 
-/* Button to Toggle Add Blog Modal */
+.comment-date {
+  font-size: 12px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.comment-content {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button Styling for Add Blog */
 .add-blog-btn {
-  transition: background-color 0.3s;
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
 }
 
 .add-blog-btn:hover {
   background-color: #218838;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.add-blog-btn:focus {
+  outline: none;
 }
 
 /* Blog Cards (Grid Layout) */
@@ -37,100 +119,24 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   height: 100%;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-p {
+.blog-card h4 {
+  color: #007bff;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.blog-card p {
   font-size: 1rem;
   line-height: 1.6;
-}
-
-/* Comment Section Inside Blog */
-.comment-section {
-  margin-top: 15px;
-}
-
-.comment-section textarea {
-  width: 100%;
-  height: 100px;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 14px;
-  outline: none;
-  border: 1px solid #ddd;
-  resize: none;
-}
-
-.a {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-.a:hover {
-  background-color: #0056b3;
-  cursor: pointer;
-}
-
-/* Responsive Design (Grid Layout) */
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 15px;
-  }
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 992px) {
-  .col-md-4 {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .col-sm-6 {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .comment-section textarea {
-    height: 90px;
-  }
-
-  .a {
-    width: 100%;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 576px) {
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-
-  .blog-card {
-    padding: 15px;
-  }
+  color: #555;
 }
 
 /* Modal Styling */
@@ -144,8 +150,9 @@ p {
 }
 
 .modal-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
+  color: #007bff;
 }
 
 .modal-body {
@@ -177,7 +184,7 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
@@ -185,3 +192,197 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dimming the background */
+  z-index: 999;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+}
+
+/* Show Modal and Overlay */
+.modal-overlay.show, .modal.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s ease 0s;
+}
+
+body.modal-open {
+  overflow: hidden; /* Prevent scrolling when modal is open */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .blog-card {
+    padding: 15px;
+  }
+
+  .blog-card h4 {
+    font-size: 1.5rem;
+  }
+
+  .blog-card p {
+    font-size: 0.95rem;
+  }
+
+  .comments-list li {
+    padding: 10px;
+  }
+
+  .comment-section textarea {
+    height: 100px;
+  }
+
+  .a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .add-blog-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    padding: 10px;
+  }
+
+  .blog-card h4 {
+    font-size: 1.4rem;
+  }
+
+  .blog-card p {
+    font-size: 0.9rem;
+  }
+
+  .comment-section textarea {
+    height: 90px;
+  }
+
+  .comments-list li {
+    padding: 8px;
+  }
+
+  .comment-author {
+    font-size: 14px;
+  }
+
+  .comment-content {
+    font-size: 13px;
+  }
+
+  .a {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .add-blog-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .blog-card {
+    padding: 8px;
+  }
+
+  .blog-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .blog-card p {
+    font-size: 0.85rem;
+  }
+
+  .comment-section textarea {
+    height: 80px;
+  }
+
+  .comments-list li {
+    padding: 6px;
+  }
+
+  .comment-author {
+    font-size: 13px;
+  }
+
+  .comment-date {
+    font-size: 10px;
+  }
+
+  .comment-content {
+    font-size: 12px;
+  }
+
+  .a {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .add-blog-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  textarea, input[type="text"] {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Devices (Mobile Portrait) */
+@media (max-width: 400px) {
+  .blog-card {
+    padding: 6px;
+  }
+
+  .blog-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .blog-card p {
+    font-size: 0.8rem;
+  }
+
+  .comment-section textarea {
+    height: 70px;
+  }
+
+  .comments-list li {
+    padding: 5px;
+  }
+
+  .a {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .add-blog-btn {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+}

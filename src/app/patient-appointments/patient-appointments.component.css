@@ -4,6 +4,7 @@
   background-position: center center;
   padding-top: 50px;
   padding-bottom: 200px;
+  background-attachment: fixed;
 }
 
 h2 {
@@ -125,5 +126,10 @@ th {
   .modal-dialog {
     width: 90%;
     max-width: none;
+  }
+}
+@media (max-width: 340px) {
+  table{
+    max-width: 100px;
   }
 }

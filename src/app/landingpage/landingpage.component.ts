@@ -15,7 +15,7 @@ export class LandingPageComponent {
   searchQuery: string = '';
 
   doctors = [
-    { name: 'Dr. John Doe', specialty: 'Cardiology', picture: '/assets/images/doct1.jpg' },
+    { name: 'Dr. John Doe', specialty: 'Cardiology', picture: '/assets/images/p1.jpg' },
     { name: 'Dr. Jane Smith', specialty: 'Dermatology', picture: '/assets/images/doctor2.avif'},
     { name: 'Dr. Emily Davis', specialty: 'Neurology', picture: '/assets/images/p2.jpg'},
     

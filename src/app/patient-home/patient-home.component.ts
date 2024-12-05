@@ -20,7 +20,7 @@ export class PatientHomeComponent {
 
   topDoctors: any[] = [
     { id: 1, name: 'Dr. John Doe', hospital: 'General Hospital', rating: 4.5, specialty: 'Cardiology' },
-    { id: 2, name: 'Dr. Jane Smith', hospital: 'City Medical Center', rating: 4.8, specialty: 'Dermatology' },
+    { id: 2, name: 'Dr. Jane Smith', hospital: 'City Center', rating: 4.8, specialty: 'Dermatology' },
     { id: 3, name: 'Dr. Sam Brown', hospital: 'St. Paul’s Clinic', rating: 4.3, specialty: 'Neurology' },
   ];
 

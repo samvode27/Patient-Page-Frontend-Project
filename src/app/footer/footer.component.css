@@ -1,8 +1,8 @@
+
 .footer {
-  background-color:  rgb(85, 37, 122);
+  background-color: rgb(156, 77, 210);
   color: #fff;
-  padding: 40px 20px;
-  margin: 10px;
+  padding: 40px 30px;
   font-size: 14px;
   margin-top: 150px;
 }
@@ -16,8 +16,7 @@
 
 .footer-section {
   flex: 1;
-  min-width: 220px; /* Improved for responsiveness */
-  margin-bottom: 20px;
+  min-width: 100px;
 }
 
 .footer-section h3 {
@@ -37,7 +36,7 @@
 
 .footer-section ul li a {
   color: #b0b0b0;
-  text-decoration: none;
+  text-decoration: none;  
   transition: color 0.3s ease;
 }
 
@@ -78,45 +77,19 @@
   margin: 0;
 }
 
-/* Mobile & Tablet */
 @media screen and (max-width: 768px) {
   .footer-container {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      flex-basis: 30%;
+      align-items: center;
   }
 
   .footer-section {
-    text-align: center;
-    margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 20px;
   }
 
   .footer-section form input[type="email"] {
-    max-width: 100%;
-  }
-}
-
-/* Large Screens (Desktop and wider) */
-@media screen and (min-width: 1024px) {
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .footer-section {
-    text-align: left;
-  }
-
-  .footer-section form input[type="email"] {
-    max-width: 300px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer {
-    padding: 60px 20px;
-  }
-
-  .footer-container {
-    gap: 40px;
+      max-width: 100%;
   }
 }
