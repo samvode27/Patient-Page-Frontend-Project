@@ -16,8 +16,8 @@ export class LandingPageComponent {
 
   doctors = [
     { name: 'Dr. Angelina M.', specialty: 'Cardiology', picture: '/assets/images/doctor3.jpg' },
-    { name: 'Dr. Jane Smith', specialty: 'Dermatology', picture: '/assets/images/doctor2.avif'},
-    { name: 'Dr. Emily Davis', specialty: 'Neurology', picture: '/assets/images/doctor4.jpg'},
+    { name: 'Dr. Jane Smith', specialty: 'Dermatology', picture: '/assets/images/doct2.jpg'},
+    { name: 'Dr. Emily Davis', specialty: 'Neurology', picture: '/assets/images/doc1.jpg'},
     
   ]  
   get filteredDoctors() {
