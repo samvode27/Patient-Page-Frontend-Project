@@ -8,22 +8,18 @@
 }
 
 h2 {
-  color: #5b5858;
   margin-top: 5%;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #28a745;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
 }
 
-button:hover {
-  background-color: #218838;
-}
+
 
 /* Make the table responsive on smaller screens */
 table {

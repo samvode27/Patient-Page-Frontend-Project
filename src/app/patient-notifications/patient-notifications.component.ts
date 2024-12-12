@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './patient-notifications.component.html',
   styleUrl: './patient-notifications.component.css'
 })
+
+
 export class PatientNotificationComponent {
 
   reminders = [
@@ -26,4 +28,21 @@ export class PatientNotificationComponent {
     { username: 'Sarah Williams', date: '2024-11-19 14:30' }
   ];
 
+  systemAlerts = [
+    { message: 'System maintenance at midnight', date: '2024-11-20 00:00' },
+    { message: 'New feature updates available!', date: '2024-11-19 08:00' }
+  ];
+
+  // Define type for dropdown keys
+  dropdownStates: Record<'reminder' | 'comment' | 'like' | 'alert', boolean> = {
+    reminder: false,
+    comment: false,
+    like: false,
+    alert: false,
+  };
+
+  // Update method to use the defined keys
+  toggleDropdown(section: keyof typeof this.dropdownStates): void {
+    this.dropdownStates[section] = !this.dropdownStates[section];
+  }
 }

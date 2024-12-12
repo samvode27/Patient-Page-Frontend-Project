@@ -16,7 +16,7 @@ import { ProfileModalComponent } from './profile-modal/profile-modal.component';
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'patientpage', pathMatch: 'full'},
+  { path: '', redirectTo: 'landingpage', pathMatch: 'full'},
   { path: 'home', component: PatientHomeComponent },
   { path: 'appointments', component: PatientAppointmentsComponent },
   { path: 'blog', component: PatientBlogComponent },

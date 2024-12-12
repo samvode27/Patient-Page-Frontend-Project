@@ -3,12 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(156, 77, 210); 
   padding: 25px 25px;
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #007bff;
 }
 
 .header.dark-theme {
@@ -74,7 +74,7 @@
 }
 
 .logo a {
-  font-size: 24px;
+  font-size: 24.5px;
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -117,7 +117,6 @@
   border-radius: 2px;
   position: relative;
   display: none;
-  background-color: rgb(156, 77, 210);
   float: right;
   min-width: 5.55rem;
 }
@@ -198,7 +197,7 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: rgb(156, 77, 210);
+    background-color: #007bff;
     width: 250px;
     border-radius: 5px;
     margin-right: -20px;
@@ -260,7 +259,7 @@
 
 /* Modal Title */
 .modal-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 600;
 }
 
@@ -272,8 +271,8 @@
 }
 
 .avatar {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 5px solid #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -291,13 +290,13 @@
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333;
 }
 
 .nick {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
 }
 
@@ -305,6 +304,7 @@
 .form-group label {
   font-weight: 600;
   color: #333;
+  font-size: 0.95rem;
 }
 
 input.form-control {
@@ -312,7 +312,7 @@ input.form-control {
   border: 1px solid #ddd;
   box-shadow: none;
   transition: border 0.3s ease;
-  padding: 10px;
+  padding: 9px;
   font-size: 1rem;
 }
 
@@ -325,10 +325,11 @@ button[type="submit"] {
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 8px 16px;
+  font-size: 0.96rem;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  margin-top: 5px;
 }
 
 button[type="submit"]:hover {
@@ -347,15 +348,16 @@ button[type="submit"]:disabled {
 
 /* Profile Info Section */
 .profile-info {
-  background-color: #fff;
+  background-color: #f5f1f1;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .profile-info p {
-  font-size: 1.1rem;
+  font-size: 1.09rem;
   color: #333;
 }
 

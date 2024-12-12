@@ -1,41 +1,51 @@
 <div class="container chat-container" id="chat">
-    <div class="row">
-  
-      <!-- Contact List Section -->
-      <div class="col-md-4 contact-list">
-        <div class="search-container">
-          <input type="text" [(ngModel)]="searchQuery" placeholder="Search Contacts..." class="search-input" />
-        </div>
-  
-        <div *ngFor="let contact of filteredContacts" class="contact" style="display: flex; align-items: center;">
-          <img [src]="contact.picture" alt="{{ contact.name }}" class="contact-avatar" />
-          <div class="contact-info">
-            <div class="contact-name">{{ contact.name }}</div>
-            <div class="contact-specialty">{{ contact.specialty }}</div>
-          </div>
+  <div class="row">
+    
+    <!-- Contact List Section -->
+    <div class="col-md-4 contact-list">
+      <div class="search-container">
+        <input type="text" [(ngModel)]="searchQuery" placeholder="Search Contacts..." class="search-input" />
+      </div>
+
+      <div 
+        *ngFor="let contact of filteredContacts" 
+        class="contact" 
+        [ngClass]="{'active-contact': contact.id === currentContact.id}"
+        (click)="selectContact(contact)" 
+        style="display: flex; align-items: center; cursor: pointer;">
+        <img [src]="contact.picture" alt="{{ contact.name }}" class="contact-avatar" />
+        <div class="contact-info">
+          <div class="contact-name">{{ contact.name }}</div>
+          <div class="contact-specialty">{{ contact.specialty }}</div>
         </div>
       </div>
-  
-      <!-- Chat Area Section -->
-      <div class="col-md-8 chat-area">
-        <div class="chat-header-container">
-          <img [src]="contact.picture" alt="{{ contact.name }}" class="chat-avatar" />
-          <div class="chat-info">
-            <div class="chat-name">{{ contact.name }}</div>
-            <div class="chat-specialty">{{ contact.specialty }}</div>
-          </div>
-        </div>
-  
-        <div *ngFor="let message of messages" class="message" [ngClass]="{'text-message': message.type === 'text', 'audio-message': message.type === 'audio'}">
-          <div class="sender">{{ message.sender }}:</div>
-          <div class="content" *ngIf="message.type === 'text'">{{ message.content }}</div>
-          <audio *ngIf="message.type === 'audio'" [src]="message.content" controls></audio>
-        </div>
-  
-        <textarea [(ngModel)]="message" placeholder="Type a message..." class="chat-input-field"></textarea>
-        <button (click)="sendMessage()" class="send-button">Send</button>
-      </div>
-  
     </div>
+    
+    <!-- Chat Area Section -->
+    <div class="col-md-8 chat-area">
+      <div class="chat-header-container">
+        <img [src]="currentContact.picture" alt="{{ currentContact.name }}" class="chat-avatar" />
+        <div class="chat-info">
+          <div class="chat-name">{{ currentContact.name }}</div>
+          <div class="chat-specialty">{{ currentContact.specialty }}</div>
+        </div>
+      </div>
+
+      <div *ngFor="let message of messages" 
+        class="message" 
+        [ngClass]="{'text-message': message.type === 'text', 'audio-message': message.type === 'audio'}">
+        <div class="sender">{{ message.sender }}:</div>
+        <div class="content" *ngIf="message.type === 'text'">{{ message.content }}</div>
+        <audio *ngIf="message.type === 'audio'" [src]="message.content" controls></audio>
+      </div>
+
+      <textarea 
+        [(ngModel)]="message" 
+        placeholder="Type a message..." 
+        class="chat-input-field">
+      </textarea>
+      <button (click)="sendMessage()" class="send-button btn btn-primary">Send</button>
+    </div>
+    
   </div>
-  
+</div>

@@ -60,11 +60,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(){
-    this.router.navigateByUrl("login");
-  }
-
-  updateProfile(){
-    this.router.navigateByUrl("profile");
+    this.router.navigateByUrl("landingpage");
   }
 
 
