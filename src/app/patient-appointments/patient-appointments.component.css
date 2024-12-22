@@ -48,7 +48,9 @@ th {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+.modal-body button{
+  background-color: #007bff;
+}
 .modal.show {
   display: block;
 }

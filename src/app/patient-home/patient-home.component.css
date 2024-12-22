@@ -70,6 +70,7 @@
 .doctor-card:hover {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
   background-color: #007bff;
+  transition: 1s;
   h4, p{
     color: white;
   }
