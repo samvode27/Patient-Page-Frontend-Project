@@ -5,7 +5,7 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-landingheader',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet],
+  imports: [CommonModule, RouterLink],
   templateUrl: './landingheader.component.html',
   styleUrls: ['./landingheader.component.css']
 })
@@ -16,7 +16,7 @@ export class LandingheaderComponent implements OnInit {
   isMenuOpen = false;
   isMobile = false;
   isDarkTheme = false;
-  isDropdownOpen= true;
+  isDropdownOpen = true;
 
   ngOnInit(): void {
     this.checkMobileScreen(); // Initial check for screen size
@@ -48,14 +48,11 @@ export class LandingheaderComponent implements OnInit {
     document.body.classList.toggle('dark-theme', this.isDarkTheme);
   }
 
-  scrollTo(sectionId: string): void {
+  scrollTo(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: elementPosition - 75, // Adjust the offset here
-        behavior: 'smooth',
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.closeMenu();
     }
   }
 

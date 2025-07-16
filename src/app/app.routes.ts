@@ -11,7 +11,6 @@ import { PatientpageComponent } from './patientpage/patientpage.component';
 import { LoginComponent } from './login/login.component';
 import { LandingPageComponent } from './landingpage/landingpage.component';
 import { LandingfooterComponent } from './landingfooter/landingfooter.component';
-import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
 import { ProfileModalComponent } from './profile-modal/profile-modal.component';
 
 
@@ -28,7 +27,6 @@ export const routes: Routes = [
   { path: 'patientpage', component: PatientpageComponent },
   { path: 'landingpage', component: LandingPageComponent },
   { path: 'landingfooter', component: LandingfooterComponent },
-  { path: 'doctor/:id', component: DoctorDetailsComponent },
   { path: 'profile-modal', component: ProfileModalComponent },
    // Doctor details route   
 ];

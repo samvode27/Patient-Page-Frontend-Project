@@ -15,6 +15,7 @@ export class PatientBlogComponent {
   blogs = [
     { title: 'My First Blog', content: 'This is the content of my first blog post.', author: 'Dr. Smith', date: new Date().toLocaleDateString() },
     { title: 'Health Tips for Winter', content: 'Here are some health tips to keep you healthy during winter.', author: 'Dr. Jane Doe', date: new Date().toLocaleDateString() },
+    { title: 'Health Tips for Winter', content: 'Here are some health tips to keep you healthy during winter.', author: 'Dr. Jane Doe', date: new Date().toLocaleDateString() }
   ];
   
   newBlog = { title: '', content: '', author: '' };

@@ -1,57 +1,64 @@
 <div class="notification-page pt-5 pb-5" id="notifications">
   <h2>Notifications</h2>
-  
+
   <div class="row pt-4">
+    
     <!-- Reminder Notifications -->
     <div class="col-md-8">
-      <div class="notification reminder">
-        <h4 (click)="toggleDropdown('reminder')">
-          <i class="fas fa-bell"></i> Reminder Notifications
-          <span class="dropdown-icon">{{ dropdownStates.reminder ? '-' : '+' }}</span>
-        </h4>
-        <ul *ngIf="dropdownStates.reminder">
-          <li *ngFor="let reminder of reminders">
-            <span>{{ reminder.message }}</span> <br />
+      <section class="notification reminder" aria-labelledby="reminder-header">
+        <header id="reminder-header">
+          <h4 (click)="toggleDropdown('reminder')" role="button" aria-controls="reminder-list">
+            <i class="fas fa-bell" aria-hidden="true"></i> Reminder Notifications
+            <span class="dropdown-icon">{{ dropdownStates.reminder ? '-' : '+' }}</span>
+          </h4>
+        </header>
+        <ul id="reminder-list" *ngIf="dropdownStates.reminder" class="list-unstyled">
+          <li *ngFor="let reminder of reminders" class="notification-item">
+            <span>{{ reminder.message }}</span>
+            <br />
             <span class="date">{{ reminder.date | date: 'short' }}</span>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
 
     <!-- Comment Notifications -->
     <div class="col-md-8">
-      <div class="notification comment">
-        <h4 (click)="toggleDropdown('comment')">
-          <i class="fas fa-comment-alt"></i> Comment Notifications
-          <span class="dropdown-icon">{{ dropdownStates.comment ? '-' : '+' }}</span>
-        </h4>
-        <ul *ngIf="dropdownStates.comment">
-          <li *ngFor="let comment of comments">
+      <section class="notification comment" aria-labelledby="comment-header">
+        <header id="comment-header">
+          <h4 (click)="toggleDropdown('comment')" role="button" aria-controls="comment-list">
+            <i class="fas fa-comment-alt" aria-hidden="true"></i> Comment Notifications
+            <span class="dropdown-icon">{{ dropdownStates.comment ? '-' : '+' }}</span>
+          </h4>
+        </header>
+        <ul id="comment-list" *ngIf="dropdownStates.comment" class="list-unstyled">
+          <li *ngFor="let comment of comments" class="notification-item">
             <span><strong>{{ comment.username }}</strong> commented: "{{ comment.text }}"</span>
             <br />
             <span class="date">{{ comment.date | date: 'short' }}</span>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
 
     <!-- Like Notifications -->
     <div class="col-md-8">
-      <div class="notification like">
-        <h4 (click)="toggleDropdown('like')">
-          <i class="fas fa-thumbs-up"></i> Like Notifications
-          <span class="dropdown-icon">{{ dropdownStates.like ? '-' : '+' }}</span>
-        </h4>
-        <ul *ngIf="dropdownStates.like">
-          <li *ngFor="let like of likes">
+      <section class="notification like" aria-labelledby="like-header">
+        <header id="like-header">
+          <h4 (click)="toggleDropdown('like')" role="button" aria-controls="like-list">
+            <i class="fas fa-thumbs-up" aria-hidden="true"></i> Like Notifications
+            <span class="dropdown-icon">{{ dropdownStates.like ? '-' : '+' }}</span>
+          </h4>
+        </header>
+        <ul id="like-list" *ngIf="dropdownStates.like" class="list-unstyled">
+          <li *ngFor="let like of likes" class="notification-item">
             <span><strong>{{ like.username }}</strong> liked your post</span>
             <br />
             <span class="date">{{ like.date | date: 'short' }}</span>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
 
-    
   </div>
 </div>

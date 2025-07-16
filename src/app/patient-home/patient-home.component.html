@@ -1,28 +1,39 @@
+
 <div class="patient-home pt-5 pb-5" id="home">
   <h2 class="text-center pt-5 pb-4">Welcome to the Patient Portal</h2>
 
   <!-- Search Section -->
   <div class="search-section text-center">
-    <input [(ngModel)]="searchQuery" placeholder="Search for doctors..." />
+    <input
+      [(ngModel)]="searchQuery"
+      (ngModelChange)="filterDoctors()"
+      placeholder="Search for doctors by name..."
+    />
 
-    <select [(ngModel)]="selectedSpecialty">
+    <select [(ngModel)]="selectedSpecialty" (change)="filterDoctors()">
       <option value="">Select Specialty</option>
       <option *ngFor="let specialty of specialties" [value]="specialty">{{ specialty }}</option>
     </select>
-    
-    <!-- Search Button -->
-    <button class="btn btn-success" (click)="searchDoctors()">Search</button>
+
+    <button class="btn btn-success">Search</button>
+
   </div>
 
-  <div class="top-doctors-container">
+  <!-- Filtered Doctors Section -->
+  <div class="top-doctors-container mt-4">
     <h2 class="text-center">Top Doctors</h2>
     <div class="top-doctors mb-5">
-      <div *ngFor="let doctor of topDoctors" class="doctor-card">
-        <h4>{{ doctor.name }}</h4>
+      <div *ngFor="let doctor of filteredDoctors" class="doctor-card">
+        <h4>{{ doctor.name }}</h4>        
         <p>{{ doctor.hospital }}</p>
-        <p>{{ doctor.rating }}</p>
+        <p>{{ doctor.rating }} ⭐</p>
         <p>{{ doctor.specialty }}</p>
       </div>
+    </div>
+
+    <!-- No doctors found message -->
+    <div *ngIf="filteredDoctors.length === 0" class="text-center mt-4">
+      <p>No doctors match your search criteria.</p>
     </div>
   </div>
 </div>

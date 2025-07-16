@@ -13,11 +13,8 @@
   <nav [class.show]="isMenuOpen" class="nav-menu">
     <ul class="nav-list">
       <li><a (click)="scrollTo('home')">Home</a></li>
-      <li><a (click)="scrollTo('appointment')">Blog</a></li>
+      <li><a (click)="scrollTo('appointment')">TopDoctors</a></li>
       <li><a routerLink="/login">Login/Signup</a></li>
-      <li><a (click)="scrollTo('chat')">FAQ</a></li>
-      <li><a (click)="scrollTo('contactus')">Contact Us</a></li>
-      <li><a (click)="scrollTo('contactus')">About Us</a></li>
     </ul>
     <button *ngIf="isMenuOpen" (click)="closeMenu()" class="close-btn">X</button>
   </nav>
