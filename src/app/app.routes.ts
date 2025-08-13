@@ -9,13 +9,15 @@ import { ChatComponent } from './chat/chat.component';
 import { ContactUsComponent } from './contactus/contactus.component';
 import { PatientpageComponent } from './patientpage/patientpage.component';
 import { LoginComponent } from './login/login.component';
+
+import { ProfileModalComponent } from './profile-modal/profile-modal.component';
 import { LandingPageComponent } from './landingpage/landingpage.component';
 import { LandingfooterComponent } from './landingfooter/landingfooter.component';
-import { ProfileModalComponent } from './profile-modal/profile-modal.component';
 
 
 export const routes: Routes = [
   { path: '', redirectTo: 'landingpage', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: PatientHomeComponent },
   { path: 'appointments', component: PatientAppointmentsComponent },
   { path: 'blog', component: PatientBlogComponent },
@@ -25,7 +27,7 @@ export const routes: Routes = [
   { path: 'contactus', component: ContactUsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'patientpage', component: PatientpageComponent },
-  { path: 'landingpage', component: LandingPageComponent },
+  { path: 'landingpage', component: LandingPageComponent},
   { path: 'landingfooter', component: LandingfooterComponent },
   { path: 'profile-modal', component: ProfileModalComponent },
    // Doctor details route   

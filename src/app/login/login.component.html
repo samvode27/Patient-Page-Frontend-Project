@@ -24,18 +24,7 @@
       </select>
     </div>
 
-  
-      <button type="button" (click)="sendOtp()">Send OTP</button>
-    
-      <div *ngIf="isOtpSent">
-        <label for="otp">OTP:</label>
-        <input id="otp" [(ngModel)]="otp" name="otp" type="text" required placeholder="Enter OTP">
-        <button type="button" (click)="verifyOtp()">Verify OTP</button>
-      </div>
-
-      <button type="submit" [disabled]="!otpVerified">Login</button>
-  
-
+      <button type="submit">Login</button>
   </form>
 
   <p class="text-center">
